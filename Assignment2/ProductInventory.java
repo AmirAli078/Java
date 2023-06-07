@@ -30,6 +30,13 @@ public class ProductInventory {
        if (!found) {
            System.out.println("Product not found in inventory.");
        }
+	      public void testEcofriendlyInfo(String type) {
+	   for(int i=0; i<products.size(); i++) {
+		   if(products.get(i).getType().equals(type) && products.get(i).getEco_friendly()==true) {
+			   products.get(i).print_Info();
+		   }
+	   }
+   }
    }
    public static void main(String args[]) {
 	   ProductInventory inventary=new ProductInventory();
